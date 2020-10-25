@@ -46,7 +46,6 @@ populateTodoList(items, todoItemsList);
 
 function deleteFunction(){
     document.querySelector("ul").innerHTML = "";
-    //window.localStorage.removeItem('ul');
 
     window.localStorage.clear()
 }
