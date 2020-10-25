@@ -1,5 +1,5 @@
 # TODO-App:
-###features:
+### features:
 - Adding items to the list
 - Deleting individual items from the list
 - Deleting all items from the list
