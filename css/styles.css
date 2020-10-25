@@ -1,0 +1,139 @@
+/*basic styling*/
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body {
+	/*formatting text*/
+	font-size: 100%;
+	font-family: "Montserrat", Georgia, serif;
+    color: #ffffff;
+
+    line-height: 2;
+    
+    background-color: black; 
+}
+/*
+===============================================================================
+Wrapper styling
+*/
+.wrapper {
+    min-height: 100vh
+}
+.wrapper >* {
+    padding: 12px;
+}
+/*
+===============================================================================
+Page Header styling
+*/
+.page-header {
+    margin-top: 40px;
+}
+.page-header img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*
+===============================================================================
+Main styling
+*/
+.page-main {
+    display: flex;
+    flex-direction: column;
+}
+@media screen and (min-width: 900px) {
+	.page-main  {
+		flex-direction: row;
+	}
+}
+.page-main div {
+    display: flex;
+    flex-direction: column;
+	align-items: center;	/*horizontally justified center*/
+    flex-grow: 1;
+    margin: 20px;	
+}
+/*
+===============================================================================
+Header styling
+*/
+h1 {
+    font-size: 1.1em;
+    letter-spacing: 4px; 
+	word-spacing: 8px;	
+}
+/*
+===============================================================================
+Button styling
+*/
+input, button {
+    padding: 5px 8px;
+    margin: 5px 0;
+    border-radius: 6px;
+    border: none;
+}
+
+@media screen and (max-width: 900px) {
+	input {
+        display: block;
+        margin: 0 0 10px;
+    }   
+}
+button {
+    cursor: pointer;
+}
+/*Different colors for different buttons*/
+.done, .add {
+    background: rgba(49, 252, 3, 0.5);
+}
+.done:hover, .add:hover {
+    background: rgba(49, 252, 3, 1);
+}
+.edit {
+    background: rgba(192, 192, 192, 0.5);
+}
+.edit:hover {
+    background: rgba(192, 192, 192, 1);
+}
+.delete {
+    background: rgba(255, 47, 0, 0.5);
+}
+.delete:hover {
+    background: rgba(255, 47, 0, 1);
+}
+/*
+===============================================================================
+List styling
+*/
+li {
+    display: block;
+    overflow: hidden;
+}
+li > label:before {
+    content: "\2605";
+    display: inline-block;
+    line-height: 2;
+    opacity: 0.5;
+    margin-right: 8px;
+}
+.items li label {
+    float: left;
+    width: 320px;
+}
+@media screen and (max-width: 900px) {
+	.items li label {
+        display: block;
+        margin: 15px 0 0px;
+    }   
+}
+
+.completed-items li > label:before {
+    color: #31fc03
+}
+.completed-items li > label{
+    text-decoration-line: line-through;
+    text-decoration-color: rgba(242, 242, 242, 0.5);
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/styles.css">
+        <title>myTODO</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="page-header">
+                <img src="images/todo.png">
+            </div>
+            <div class="page-main">
+                <!--Add todo item-->
+                <div class="add-item">
+                    <h1>Add Item</h1>
+                    <form>
+                        <input type="text" id="item-id" name="item" placeholder="New item" required>
+                        <button class="add" onclick="addFunction()">+ Add Item</button>
+                    </form>
+                </div>
+
+                <div class="items">
+                    <!--displaying todo items-->
+                    <h1>To Do</h1>
+                    <ul>
+                        <li>
+                            <label>Objects: Differentiate between the bracket notation and the dot notation</label>
+                            <button class="edit" onclick="editFunction()">Edit Item</button> 
+                            <button class="done" onclick="doneFunction()">Done</button>
+                        </li>
+                        <li>
+                            <label>Create a todo app</label> 
+                            <button class="edit">Edit Item</button> 
+                            <button class="done" onclick="doneFunction()">Done</button>
+                        </li>
+                    </ul>
+                    <!--delete todo items-->
+                    <h1>Delete all</h1>
+                    <button class="delete" onclick="deleteFunction()">Delete All Items</button> 
+                </div>
+
+                <!--completed todo items-->
+                <div class="completed-items">
+                    <h1>Completed</h1>
+                    <ul>
+                        <li>
+                            <label>HTML structure and css</label> 
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+            <div class="page-footer">
+    
+            </div>
+        </div>
+
+        <!--javascript file-->
+        <script src="js/app.js"></script>
+    </body>
+</html>
