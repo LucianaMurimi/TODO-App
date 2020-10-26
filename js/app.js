@@ -36,3 +36,16 @@ function populateTodoList(arr, ul) {
       }
 }
 populateTodoList(items, todoItemsList);
+
+
+
+
+
+
+//Clear All Items
+
+function deleteFunction(){
+    document.querySelector("ul").innerHTML = "";
+
+    window.localStorage.clear()
+}
