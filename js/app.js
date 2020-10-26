@@ -29,8 +29,10 @@ function populateTodoList(arr, ul) {
         let li = document.createElement('li');
         li.innerHTML = (`
             <label>${arr[i]}</label>
+            <div>
             <button class="edit" onclick="editFunction()">Edit Item</button> 
             <button class="done" onclick="doneFunction()">Done</button>
+            </div>
             `);
         ul.append(li);
       }

@@ -6,7 +6,7 @@
 }
 body {
 	/*formatting text*/
-	font-size: 100%;
+	font-size: 85%;
 	font-family: "Montserrat", Georgia, serif;
     color: #ffffff;
 
@@ -79,7 +79,7 @@ input, button {
 @media screen and (max-width: 900px) {
 	input {
         display: block;
-        margin: 0 0 10px;
+        /*margin: 0 0 8px;*/
     }   
 }
 button {
@@ -119,17 +119,25 @@ li > label:before {
     opacity: 0.5;
     margin-right: 8px;
 }
+.items li{
+    padding: 8px;
+    border-bottom: rgba(242, 242, 242, 0.1) dashed 1px;
+}
 .items li label {
     float: left;
     width: 320px;
 }
 @media screen and (max-width: 900px) {
 	.items li label {
-        display: block;
-        margin: 15px 0 0px;
+        width: 95%;
     }   
 }
-
+/*aligning the edit and done buttons to right*/
+.items li div {
+    display: inline;
+    float: right;
+    margin: 0;
+}
 .completed-items li > label:before {
     color: #31fc03
 }
