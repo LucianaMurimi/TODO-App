@@ -33,8 +33,18 @@ function populateTodoList(arr, ul) {
             <button class="edit" onclick="editFunction()">Edit Item</button> 
             <button class="done" onclick="doneFunction()">Done</button>
             </div>
+
             `);
         ul.append(li);
       }
 }
+
 populateTodoList(items, todoItemsList);
+
+//Clear All Items
+function deleteFunction(){
+    document.querySelector("ul").innerHTML = "";
+
+    window.localStorage.clear()
+}
+

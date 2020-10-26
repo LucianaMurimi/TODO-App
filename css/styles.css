@@ -138,6 +138,7 @@ li > label:before {
     float: right;
     margin: 0;
 }
+
 .completed-items li > label:before {
     color: #31fc03
 }
