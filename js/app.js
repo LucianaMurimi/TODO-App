@@ -117,7 +117,7 @@ function populateCompletedItems(arr, ul) {
         }
   }
 }
-//clear all items
+
 function deleteFunction(){
   /*document.querySelector("ul").innerHTML = "";
   window.localStorage.clear()*/
