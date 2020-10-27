@@ -36,18 +36,20 @@ function addFunction () {
 }
 
 function populateTodoList (arr, ul) {
-  for (let i in arr) {
-    let li = document.createElement('li')
-    li.innerHTML = (`
-            <label>${arr[i].item}</label>
-            <div id="${arr[i].id}">
-            <button class="edit" onclick="editFunction()">Edit Item</button> 
-            <button class="done" onclick="doneFunction()">Done</button>
-            </div>
-
-            `);
-        ul.append(li);
-      }
+  if(arr) {
+    for (let i in arr) {
+      let li = document.createElement('li')
+      li.innerHTML = (`
+              <label>${arr[i].item}</label>
+              <div id="${arr[i].id}">
+              <button class="edit" onclick="editFunction()">Edit Item</button> 
+              <button class="done" onclick="doneFunction()">Done</button>
+              </div>
+  
+              `);
+          ul.append(li);
+        }
+  }
 }
 
 //edit items
