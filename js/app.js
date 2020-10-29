@@ -65,9 +65,9 @@ ul.addEventListener('click', change => {
     const div = btn.parentNode
     const li = div.parentNode
     const ul = li.parentNode
-
-    li.classList.add("editMode");
+    
     if (btn.textContent === 'Edit Item') {
+      li.classList.add("editMode");
       const label = li.firstElementChild
       const input = document.createElement('input')
       input.type = 'text'
