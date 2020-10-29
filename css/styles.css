@@ -86,10 +86,10 @@ button {
     cursor: pointer;
 }
 /*Different colors for different buttons*/
-.done, .add {
+.done, .add, .save {
     background: rgba(49, 252, 3, 0.5);
 }
-.done:hover, .add:hover {
+.done:hover, .add:hover, .save:hover {
     background: rgba(49, 252, 3, 1);
 }
 .edit {
@@ -123,12 +123,12 @@ li > label:before {
     padding: 8px;
     border-bottom: rgba(242, 242, 242, 0.1) dashed 1px;
 }
-.items li label {
+.items li label, ul li input[type=text] {
     float: left;
     width: 320px;
 }
 @media screen and (max-width: 900px) {
-	.items li label {
+	.items li label, ul li input[type=text] {
         width: 95%;
     }   
 }
@@ -145,4 +145,20 @@ li > label:before {
 .completed-items li > label{
     text-decoration-line: line-through;
     text-decoration-color: rgba(242, 242, 242, 0.5);
+}
+/*
+===============================================================================
+Edit Mode Styling*/
+ul li input[type=text] {
+    margin-right: 8px;
+    display:block;
+}
+ul li .save, ul li.editMode .delete {
+    display: inline;
+}
+ul li .delete{
+    display: none;
+}
+ul li.editMode .done {
+    display: none;
 }
