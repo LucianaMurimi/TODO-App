@@ -140,14 +140,49 @@ function populateCompletedItems(arr, ul) {
       let li = document.createElement('li')
       li.innerHTML = (`
               <li>
-                  <label>${arr[i].item}</label> 
+                  <label>${arr[i].item}</label>
+                  <button class="deleteItem" onclick="deletecompletedItemFunction()">Delete</button> 
               </li>
               `);
           ul.append(li);
         }
   }
 }
+/*
+===============================================================================
+delete individual task*/
 
+function deleteItemFunction(){
+  //step 1. get the specific task that is to be deleted
+  let deleteItemID = this.event.currentTarget.parentNode.id;
+
+  let deleteItem = items.filter(element => element.id == deleteItemID);
+  //step 2. remove that specific task from the todo `cmpletedItems`
+  arrIndex = items.findIndex(element => element.id == deleteItemID);
+  items.splice(arrIndex, 1);
+  location.reload(); 
+  //step 4. reset the `completedItems` localStorage to reflect only the remaining completed tasks
+  localStorage.removeItem('items');
+  localStorage.setItem('items', JSON.stringify(items));
+ 
+}
+/*
+===============================================================================
+delete individual completed task*/
+
+function deletecompletedItemFunction(){
+  //step 1. get the specific task that is to be deleted
+  let deleteItemID = this.event.currentTarget.parentNode.id;
+  let deleteItem = completedItems.filter(element => element.id == deleteItemID);
+  //step 2. remove that specific task from the todo `cmpletedItems`
+  arrIndex = completedItems.findIndex(element => element.id == deleteItemID);
+  completedItems.splice(arrIndex, 1);
+  location.reload(); 
+  //step 4. reset the `completedItems` localStorage to reflect only the remaining completed tasks
+  localStorage.removeItem('completedItems');
+  localStorage.setItem('completedItems', JSON.stringify(completedItems));
+ 
+}
 /*
 ===============================================================================
 delete all -> clearing the localStorage*/

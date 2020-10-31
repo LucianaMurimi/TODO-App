@@ -22,7 +22,7 @@ Wrapper styling
     min-height: 100vh
 }
 .wrapper >* {
-    padding: 12px;
+    padding: 10px;
 }
 /*
 ===============================================================================
@@ -54,7 +54,7 @@ Main styling
     flex-direction: column;
 	align-items: center;	/*horizontally justified center*/
     flex-grow: 1;
-    margin: 20px;	
+    margin: 15px;	
 }
 /*
 ===============================================================================
@@ -104,6 +104,12 @@ button {
 .delete:hover {
     background: rgba(255, 47, 0, 1);
 }
+.deleteItem {
+    background: rgba(253, 84, 46, 0.5);
+}
+.deleteItem:hover {
+    background: rgba(253, 84, 46, 1);
+}
 /*
 ===============================================================================
 List styling
@@ -133,12 +139,17 @@ li > label:before {
     }   
 }
 /*aligning the edit and done buttons to right*/
-.items li div {
+.items li div, .deleteItem {
     display: inline;
     float: right;
     margin: 0;
 }
-
+.deleteItem {
+    margin-left: 8px;
+}
+.completed-items li {
+    margin: 3px 0;
+}
 .completed-items li > label:before {
     color: #31fc03
 }
