@@ -1,4 +1,7 @@
 # TODO-App:
+
+hosted at https://mytodo-sca.netlify.app/
+
 ### features:
 - Adding items to the list
 - Deleting individual items from the list
